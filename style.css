@@ -4,32 +4,30 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* FORMATTING THE BODY AND BACKGROUND */
 body {
   font-family: "Lexend Deca", sans-serif;
-  background: #f5f5f5;
+  background-color: #000000;
   color: #111827;
 }
-
-body {
-  background-color: #000000;
-}
+/* FORMATTING THE STICKY HEADER */
 header {
   text-align: center;
-  padding: 3px 0;
   background: #000000;
   color: rgb(0, 255, 13);
   font-family: Amatic SC;
   position: sticky;
+  padding: 3px 0;
   top: 0;
   z-index: 2;
 }
 .pageHEader {
   font-size: 50px;
 }
-/* GRID LAYOUT */
+/* MASTER GRID LAYOUT */
 .gridContainer {
   display: grid;
-  grid-template-columns: 1fr 2fr; /* 1/3 form, 2/3 cards */
+  grid-template-columns: 1fr 2fr; 
   gap: 30px;
   padding: 40px;
 }
@@ -38,7 +36,7 @@ header {
   display: flex;
   justify-content: center;
 }
-
+/* FORM SECTION */
 .formSection {
   background: rgb(35, 35, 35);
   padding: 25px;
@@ -54,7 +52,7 @@ header {
   align-content: center;
   position: fixed;
 }
-
+/* FORM INPUT, PLACEHOLDERS AND SELECT */
 .formSection input,
 .formSection select {
   padding: 10px;
@@ -70,7 +68,6 @@ header {
 .formSection ::placeholder {
   color: rgb(99, 148, 101);
 }
-
 .formSection button {
   padding: 12px;
   background: #13df00;
@@ -80,17 +77,15 @@ header {
   cursor: pointer;
   transition: 0.3s;
 }
-
 .formSection button:hover {
   background: #1e40af;
 }
-
 /* RIGHT GRID - CARDS */
 .gridTwo {
   display: flex;
   justify-content: center;
 }
-
+/* MAKING THE PHANTOM CARDS */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
