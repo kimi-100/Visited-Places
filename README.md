@@ -56,3 +56,23 @@ Future Improvements
 - Add search and filter options.
 - Enhance mobile responsiveness for smaller screens.
 - Add animations for adding/removing cards.
+
+## Tests
+
+### Describe: Place()
+Test: "It should create an object with name, county, landmarks, date, description, and rating."
+Code: const myPlace = new Place("Nairobi", "Nairobi", "KICC", "2024-01-01", "City in the sun", 5);
+Expected Output: Place { name: "Nairobi", county: "Nairobi", landmarks: "KICC", ... }
+
+### Describe: PlaceManager.prototype.addPlace()
+- Test: "It should add a new place to the places object and assign a unique ID."
+- Code: 
+  const manager = new PlaceManager();
+  const place = new Place("Coast");
+  manager.addPlace(place);
+- Expected Output: manager.places will contain an object with a key matching the timestamp ID.
+
+### Describe: PlaceManager.prototype.deletePlace()
+- Test: "It should remove a place from the places object using its ID."
+- Code:
+  manager.deletePlace(id);
