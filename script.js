@@ -15,4 +15,16 @@ PlaceManager.prototype.addPlace = function(place) {
     this.places[place.id] = place;
     this.saveToStorage();
 };
+// PLACE CARD CONSTRUCTOR
+function Place(name, county, landmarks, date, desc, rating) {
+    this.name = name;
+    this.county = county;
+    this.landmarks = landmarks;
+    this.date = date;
+    this.desc = desc;
+    this.rating = rating; 
+    this.id = null;
+}
+// INITIALIZING THE SYSTEM
+const myPlaces = new PlaceManager();
 
