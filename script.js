@@ -2,22 +2,21 @@
 function PlaceManager() {
   this.places = this.loadFromStorage();
 }
-
+// STORAGE PROTOTYPE
 PlaceManager.prototype.saveToStorage = function () {
   localStorage.setItem("placesData", JSON.stringify(this.places));
 };
-
 PlaceManager.prototype.loadFromStorage = function () {
   const saved = localStorage.getItem("placesData");
   return saved ? JSON.parse(saved) : {};
 };
-
+// ID ASSIGNER PROTOTYPE
 PlaceManager.prototype.addPlace = function (place) {
   place.id = Date.now();
   this.places[place.id] = place;
   this.saveToStorage();
 };
-
+// DELETING PROTOTYPE
 PlaceManager.prototype.deletePlace = function (id) {
   if (this.places[id]) {
     delete this.places[id];
@@ -26,7 +25,6 @@ PlaceManager.prototype.deletePlace = function (id) {
   }
   return false;
 };
-
 // PLACE CONSTRUCTOR
 function Place(name, county, landmarks, date, desc, rating) {
   this.name = name;
@@ -37,32 +35,24 @@ function Place(name, county, landmarks, date, desc, rating) {
   this.rating = rating;
   this.id = null;
 }
-
-// INITIALIZE
+// INITIALIZE THE SYSTEM
 const myPlaces = new PlaceManager();
-
 // RENDER FUNCTION
 function renderPlaces() {
   const container = document.getElementById("cards-container");
   if (!container) return;
-
   container.innerHTML = ""; // clear
-
   const placesArr = Object.values(myPlaces.places);
-
   if (placesArr.length === 0) {
     container.innerHTML = "<p>No places visited yet!</p>";
     return;
   }
-
   placesArr.sort(function (a, b) {
     return a.id - b.id;
   });
-
   placesArr.forEach(function (place) {
     const card = document.createElement("div");
     card.className = "placeCard";
-
     card.innerHTML =
       "" +
       '<div class="placeInner">' +
@@ -95,7 +85,6 @@ function renderPlaces() {
       ')">Delete</button>' +
       "</div>" +
       "</div>";
-
     container.appendChild(card);
   });
 }
