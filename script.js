@@ -63,4 +63,36 @@ function renderPlaces() {
         container.appendChild(card);
     });
 }
+// EVENT HANDLERS
+function handleAddPlace(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const county = document.getElementById('county').value.trim();
+    const landmarks = document.getElementById('landmarks').value.trim();
+    const date = document.getElementById('date').value;
+    const desc = document.getElementById('desc').value.trim();
+    const rating = document.getElementById('rating').value;
+
+    if(!name || !county || !landmarks || !date || !desc || !rating) {
+        alert("Fill all fields!");
+        return;
+    }
+
+    const newPlace = new Place(name, county, landmarks, date, desc, rating);
+    myPlaces.addPlace(newPlace);
+
+    renderPlaces();
+    document.getElementById('placeForm').reset();
+}
+
+function handleDelete(id) {
+    if(confirm("Delete this place?")) {
+        myPlaces.deletePlace(id);
+        renderPlaces();
+    }
+}
+// DRAWING DATA 
+document.getElementById('placeForm').addEventListener('submit', handleAddPlace);
+document.addEventListener('DOMContentLoaded', renderPlaces);
 
