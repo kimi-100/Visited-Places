@@ -63,6 +63,7 @@ function renderPlaces() {
       "<p>⭐ " +
       place.rating +
       "/5</p>" +
+      "<p>Hover For More</p>" +
       "</div>" +
       '<div class="placeBack">' +
       "<h4>" +
