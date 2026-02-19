@@ -27,7 +27,7 @@ header {
 /* MASTER GRID LAYOUT */
 .gridContainer {
   display: grid;
-  grid-template-columns: 1fr 2fr; 
+  grid-template-columns: 1fr 2fr;
   gap: 30px;
   padding: 40px;
 }
