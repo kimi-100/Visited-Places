@@ -5,13 +5,13 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   background: #f5f5f5;
   color: #111827;
 }
 
-body{
-    background-color: #000000;
+body {
+  background-color: #000000;
 }
 header {
   text-align: center;
@@ -55,7 +55,8 @@ header {
   position: fixed;
 }
 
-.formSection input,.formSection select {
+.formSection input,
+.formSection select {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #474646;
@@ -63,13 +64,12 @@ header {
   margin: 7px;
 }
 .formSection input {
-    background-color: rgb(71, 71, 71);
-    color: white;
+  background-color: rgb(71, 71, 71);
+  color: white;
 }
- .formSection ::placeholder{
-    color:rgb(99, 148, 101)
- }
-
+.formSection ::placeholder {
+  color: rgb(99, 148, 101);
+}
 
 .formSection button {
   padding: 12px;
@@ -131,8 +131,10 @@ header {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .placeFront {
@@ -164,4 +166,3 @@ header {
 .placeBack button:hover {
   background: #b91c1c;
 }
-
