@@ -1,0 +1,21 @@
+/*CSS RESET AND CONFIGURATIONS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  background: #f5f5f5;
+  color: #111827;
+}
+header {
+  text-align: center;
+  padding: 3px 0;
+  background: #000000;
+  color: rgb(0, 255, 13);
+  font-family: Amatic SC;
+}
+.pageHEader {
+  font-size: 50px;
+}
