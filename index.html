@@ -1,20 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <!-- CONFIGURATIONS -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kimi's Visited Places</title>
     <!-- CSS LINKING -->
-     <link rel="stylesheet" href="style.css">
-     <!-- IMPORTING GOOGLE FONTS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- IMPORTING GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Anton&family=Barriecito&family=Cormorant:ital,wght@0,300..700;1,300..700&family=DynaPuff:wght@400..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Great+Vibes&family=Gwendolyn:wght@400;700&family=Julius+Sans+One&family=Lexend+Deca:wght@440&family=Oswald:wght@200..700&family=Schoolbell&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet"/>
-</head>
-<body>
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Anton&family=Barriecito&family=Cormorant:ital,wght@0,300..700;1,300..700&family=DynaPuff:wght@400..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Great+Vibes&family=Gwendolyn:wght@400;700&family=Julius+Sans+One&family=Lexend+Deca:wght@440&family=Oswald:wght@200..700&family=Schoolbell&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="pageHEader">Places that Kimi has Been</h1>
+    </header>
+    <!-- GRID ONE -->
+    <div class="gridOne">
+      <!-- FORM -->
+      <section class="formSection">
+        <form id="placeForm">
+          <input
+            type="text"
+            id="name"
+            placeholder="Where did you Go?"
+            required
+          />
+          <input
+            type="color"
+            id="color"
+            placeholder="Define an accent colour!"
+            required
+          />
+          <input
+            type="text"
+            id="county"
+            placeholder="Which county was it in?"
+            required
+          />
+          <input
+            type="text"
+            id="landmarks"
+            placeholder="Any Interesting Landmark?"
+            required
+          />
+          <input
+            type="date"
+            id="date"
+            placeholder="When did you go?"
+            required
+          />
+          <input
+            type="text"
+            id="desc"
+            placeholder="How would you describe it?"
+            required
+          />
+          <input
+            type="number"
+            id="rating"
+            placeholder="Rating (1-5)"
+            min="1"
+            max="5"
+            required
+          />
+          <button id="addPlace" type="submit">Add Place</button>
+        </form>
+      </section>
+    </div>
+    <div class="gridTwo">
+      <!-- PHANTOM CARDS -->
+      <section class="cards-container" id="cards-container">
+        <!-- EMPTY CARD -->
+      </section>
+    </div>
     <!-- JAVASCRIPT LINKING -->
-     <Script src="script.js"></Script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
